@@ -1,0 +1,33 @@
+{
+  "name": "boost",
+  "version": "1.59.0",
+  "summary": "Boost provides free peer-reviewed portable C++ source libraries.",
+  "homepage": "http://www.boost.org",
+  "license": {
+    "type": "Boost Software License"
+  },
+  "authors": "Rene Rivera",
+  "source": {
+    "http": "http://sourceforge.net/projects/boost/files/boost/1.59.0/boost_1_59_0.tar.gz"
+  },
+  "platforms": {
+    "ios": "4.0",
+    "osx": "10.6"
+  },
+  "xcconfig": {
+    "HEADER_SEARCH_PATHS": "\"${PODS_ROOT}/boost\""
+  },
+  "requires_arc": false,
+  "subspecs": [
+    {
+      "name": "propetry-tree-includes",
+      "preserve_paths": [
+        "boost/*.h",
+        "boost/predef/**/*.h",
+        "boost/*.hpp",
+        "boost/{property_tree}/**/*.hpp",
+        "boost/xpressive/**/*.ipp"
+      ]
+    }
+  ]
+}
